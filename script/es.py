@@ -155,30 +155,6 @@ def count_documents_containing_phrases(
 
     return result["count"]
 
-
-# def multiple_count_documents_containing_phrases(
-#     index: str,
-#     phrases: Union[str, List[str]],
-# ):
-#     if isinstance(phrases, str):
-#         phrases = [phrases]
-#     es = es_init()
-#     num_shards = len(es.cat.shards(index=index, format="json"))
-#     final_counts = [0 for _ in range(len(phrases))]
-#     for shard in range(num_shards):
-#         # TODO: for the time being its all in memory. but we might want to do some
-#         # map-reduce.
-#         final_counts = []
-#         queries = []
-#         for phrase in phrases:
-#             queries.append({"index": index, "search_type": "query_then_fetch"})
-#             queries.append({"size": 0, "query": {"match_phrase": {"text": phrase}}})
-
-#         results = es.msearch(searches=queries, search_type="query_then_fetch", routing=f"_shards:{shard}")
-#         # todo: change to a generator?
-#         counts = [r["hits"]["total"]["value"] for r in results["responses"]]
-#         final_counts = [sum(x) for x in zip(final_counts, counts)]
-#     return final_counts
 def get_document_ids_containing_phrases(
     index: str,
     phrases: Union[str, List[str]],
