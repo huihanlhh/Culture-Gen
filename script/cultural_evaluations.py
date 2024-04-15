@@ -1252,8 +1252,8 @@ if __name__ == "__main__":
     
     elif args.eval == "correlation":
         # uncomment for diversity correlation with dataset topic frequency
-        # diversity_save_path = f"{args.home_dir}/probable_data/categories_nationality_100_{args.model_name}_prob={args.probably}_diversity_evaluation_count_filtered.json"
-        # calculate_diversity_correlation_with_training_data(diversity_save_path, eval_type="count", topic_list=None, gender="")
+        diversity_save_path = f"{args.home_dir}/probable_data/categories_nationality_100_{args.model_name}_prob={args.probably}_diversity_evaluation_count_filtered.json"
+        calculate_diversity_correlation_with_training_data(diversity_save_path, eval_type="count", topic_list=None, gender="")
 
         # uncomment for markedness correlation with dataset topic frequency
         markedness_save_path = f"{args.home_dir}/probable_data/categories_nationality_100_{args.model_name}_prob={args.probably}_markedness_evaluation.json"
