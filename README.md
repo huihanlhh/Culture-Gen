@@ -1,6 +1,6 @@
 # CULTURE-GEN: Revealing Global Cultural Perception in Language Models through Natural Language Prompting"
 
-This repository contains code for our arxiv paper "[CULTURE-GEN: Revealing Global Cultural Perception in Language Models through Natural Language Prompting](https://arxiv.org/abs/2404.10199)".
+This repository contains code for our COLM 2024 paper "[CULTURE-GEN: Revealing Global Cultural Perception in Language Models through Natural Language Prompting](https://arxiv.org/abs/2404.10199)".
 
 ![symbol](./figures/symbol.png)
 
